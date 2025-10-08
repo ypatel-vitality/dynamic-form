@@ -1,0 +1,157 @@
+{
+  "title": "Health Assessment",
+  "steps": [
+    {
+      "id": "step1",
+      "icon":"fa-solid fa-person-walking",
+      "title": "Physical activity and fitness",
+      "description": "How do you get active? This section will cover your exercise habits, workout intensity, and more. Answer these questions to reflect your exercise habits right now.",
+      "questions": [
+        {
+          "id": "q1",
+          "label": "How many days a week do you exercise?",
+          "description": "",
+          "type": "radio",
+          "options": ["0", "1", "2", "3", "4", "5", "6", "7"],
+          "required": true
+        },
+        {
+          "id": "q2",
+          "label": "On the days you do exercise, on average, about how many minutes do you spend doing so?",
+          "description": "",
+          "type": "radio",
+          "options": ["15 minutes", "30 minutes", "45 minutes", "60 minutes", "75 minutes", "90 minutes", "120 minutes or more"],
+          "required": true,
+          "conditional": {
+            "field": "q1",
+            "value": ["1", "2", "3", "4", "5", "6", "7"]
+          }
+        },
+        {
+          "id": "q3",
+          "label": "How intense are these exercise sessions?",
+          "description": "Light intensity is a slower activity - an easy walk or bike ride. Moderate intensity is a faster walk, bike ride or any activity where you aren't completely out of breath. If you're moving with vigorous intensity - running or cycling quickly - you won't be able to carry on a conversation.",
+          "type": "radio",
+          "options": ["Light", "Moderate", "Vigorous", "Combination"],
+          "required": true,
+          "conditional": {
+            "field": "q1",
+            "value": ["1", "2", "3", "4", "5", "6", "7"]
+          }
+        },
+        {
+          "id": "q4",
+          "label": "On an average day, how much time do you spend seated or otherwise inactive?",
+          "description": "Think about how much time you spend sitting… this includes watching television, playing video games, using a computer, travelling and working.",
+          "type": "radio",
+          "options": ["0 - 2 hours", "3 - 4 hours", "5 - 6 hours", "7 - 8 hours", "9 - 10 hours", "11 - 12 hours", "13 or more hours"],
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "step2",
+      "icon":"fa-solid fa-salad",
+      "title": "Nutrition",
+      "description": "Ready to tell us about your diet? Answer these questions to give us more information on your usual eating habits.",
+      "questions": [
+        {
+          "id": "fruit_frequency",
+          "label": "How often do you eat fresh fruit?",
+          "description": "",
+          "type": "radio",
+          "options": ["Never", "1-2 times", "3-4 times", "5+ times"],
+          "required": true
+        },
+        {
+          "id": "vegetable_frequency",
+          "label": "How often do you eat vegetables?",
+          "description": "",
+          "type": "radio",
+          "options": ["Never", "1-2 times", "3-4 times", "5+ times"],
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "step3",
+      "icon":"fa-solid fa-stethoscope",
+      "title": "Biometrics and health conditions",
+      "description": "In this section, we'll find out more about your health history and measurements. Answer these questions to the best of your ability.<br><br>Unsure how to answer? No problem. You can either provide an estimate or select 'I don't know' from the list of answers provided.",
+      "questions": [
+        {
+          "id": "height",
+          "label": "Your height (cm)",
+          "description": "",
+          "type": "text",
+          "placeholder": "Enter height",
+          "required": true
+        },
+        {
+          "id": "weight",
+          "label": "Your weight (kg)",
+          "description": "",
+          "type": "text",
+          "placeholder": "Enter weight",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "step4",
+      "icon":"fa-solid fa-head-side-heart",
+      "title": "Mental wellbeing",
+      "description": "Let's check in with your current headspace. Answer these questions to reflect how you've been feeling lately - emotionally and mentally.",
+      "questions": [
+        {
+          "id": "stress_level",
+          "label": "How often do you feel stressed?",
+          "description": "",
+          "type": "radio",
+          "options": ["Never", "Sometimes", "Often", "Always"],
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "step5",
+      "icon":"fa-solid fa-wine-glass",
+      "title": "Alcohol and tobacco",
+      "description": "Understanding your current alcohol or tobacco use is important to guide your overall health recommendations. Answer these questions about your habits right now.",
+      "questions": [
+        {
+          "id": "alcohol_use",
+          "label": "Do you consume alcohol?",
+          "description": "",
+          "type": "radio",
+          "options": ["Yes", "No"],
+          "required": true
+        },
+        {
+          "id": "tobacco_use",
+          "label": "Do you use tobacco products?",
+          "description": "",
+          "type": "radio",
+          "options": ["Yes", "No"],
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "step6",
+      "icon":"fa-solid fa-bed-front",
+      "title": "Sleep",
+      "description": "Are you getting the right amount of sleep? Studies show that sleep plays a big role in your everyday wellness and long-term health. Answer these questions about your sleep habits right now.",
+      "questions": [
+        {
+          "id": "q1",
+          "label": "How many hours do you usually sleep in a 24-hour period?",
+          "description": "",
+          "type": "text",
+          "placeholder": "Hours per day",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
