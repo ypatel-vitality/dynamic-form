@@ -3,152 +3,314 @@
   "steps": [
     {
       "id": "step1",
-      "icon":"fa-solid fa-person-walking",
+      "icon": "fa-solid fa-person-walking",
       "title": "Physical activity and fitness",
       "description": "How do you get active? This section will cover your exercise habits, workout intensity, and more. Answer these questions to reflect your exercise habits right now.",
       "questions": [
         {
-          "id": "q1",
-          "label": "How many days a week do you exercise?",
+          "id": "step1_q1",
+          "label": "On average, how many days a week do you do exercise?",
           "description": "",
           "type": "radio",
           "options": ["0", "1", "2", "3", "4", "5", "6", "7"],
+          "layout": "inline",
           "required": true
         },
         {
-          "id": "q2",
+          "id": "step1_q2",
           "label": "On the days you do exercise, on average, about how many minutes do you spend doing so?",
           "description": "",
           "type": "radio",
-          "options": ["15 minutes", "30 minutes", "45 minutes", "60 minutes", "75 minutes", "90 minutes", "120 minutes or more"],
+          "options": [
+            "15 minutes",
+            "30 minutes",
+            "45 minutes",
+            "60 minutes",
+            "75 minutes",
+            "90 minutes",
+            "120 minutes or more"
+          ],
+          "layout": "inline",
           "required": true,
           "conditional": {
-            "field": "q1",
+            "field": "step1_q1",
             "value": ["1", "2", "3", "4", "5", "6", "7"]
           }
         },
         {
-          "id": "q3",
+          "id": "step1_q3",
           "label": "How intense are these exercise sessions?",
           "description": "Light intensity is a slower activity - an easy walk or bike ride. Moderate intensity is a faster walk, bike ride or any activity where you aren't completely out of breath. If you're moving with vigorous intensity - running or cycling quickly - you won't be able to carry on a conversation.",
           "type": "radio",
           "options": ["Light", "Moderate", "Vigorous", "Combination"],
+          "layout": "inline",
           "required": true,
           "conditional": {
-            "field": "q1",
+            "field": "step1_q1",
             "value": ["1", "2", "3", "4", "5", "6", "7"]
           }
         },
         {
-          "id": "q4",
+          "id": "step1_q4",
           "label": "On an average day, how much time do you spend seated or otherwise inactive?",
           "description": "Think about how much time you spend sitting… this includes watching television, playing video games, using a computer, travelling and working.",
           "type": "radio",
-          "options": ["0 - 2 hours", "3 - 4 hours", "5 - 6 hours", "7 - 8 hours", "9 - 10 hours", "11 - 12 hours", "13 or more hours"],
+          "options": [
+            "0 - 2 hours",
+            "3 - 4 hours",
+            "5 - 6 hours",
+            "7 - 8 hours",
+            "9 - 10 hours",
+            "11 - 12 hours",
+            "13 or more hours"
+          ],
+          "layout": "inline",
           "required": true
         }
       ]
     },
     {
       "id": "step2",
-      "icon":"fa-solid fa-salad",
+      "icon": "fa-solid fa-salad",
       "title": "Nutrition",
       "description": "Ready to tell us about your diet? Answer these questions to give us more information on your usual eating habits.",
       "questions": [
         {
-          "id": "fruit_frequency",
-          "label": "How often do you eat fresh fruit?",
-          "description": "",
+          "id": "step2_q1",
+          "label": "In a typical day, how often do your meals and snacks include vegetables?",
+          "description": "Vegetables can be fresh, frozen, cooked, canned or dried and range from squash, beets and sweet potatoes, to greens like brussel sprouts and kale. Pickled vegetables, juice, nuts, seeds or legumes don't count.",
           "type": "radio",
-          "options": ["Never", "1-2 times", "3-4 times", "5+ times"],
+          "options": [
+            "Never due to food allergies, lifestyle choice or other reasons",
+            "Less than 1 time per day",
+            "1 - 2 times per day",
+            "3 times per day",
+            "4 times per day",
+            "5+ times per day"
+          ],
+          "layout": "block",
           "required": true
         },
         {
-          "id": "vegetable_frequency",
-          "label": "How often do you eat vegetables?",
-          "description": "",
+          "id": "step2_q2",
+          "label": "In a typical day, how often do your meals and snacks include fruit?",
+          "description": "Fruit can be fresh, frozen, cooked, canned or dried. Fruit juice or sugar-coated dried fruit don't count.",
           "type": "radio",
-          "options": ["Never", "1-2 times", "3-4 times", "5+ times"],
+          "options": [
+            "Never due to food allergies, lifestyle choice or other reasons",
+            "Less than 1 time per day",
+            "1 - 2 times per day",
+            "3 times per day",
+            "4 times per day",
+            "5+ times per day"
+          ],
+          "layout": "block",
+          "required": true
+        },
+        {
+          "id": "step2_q3",
+          "label": "In a typical day, how often do your meals and snacks include whole grains?",
+          "description": "Whole grains include brown rice, whole wheat bread or pasta, oats, quinoa, barley, and corn. Refined grains like white rice, white bread, and white pasta don't count.",
+          "type": "radio",
+          "options": [
+            "Never due to food allergies, lifestyle choice or other reasons",
+            "Less than 1 time per day",
+            "1 - 2 times per day",
+            "3 times per day",
+            "4 times per day",
+            "5+ times per day"
+          ],
+          "layout": "block",
+          "required": true
+        },
+        {
+          "id": "step2_q4",
+          "label": "In a typical day, how often do your meals and snacks include sugar sweetened beverages?",
+          "description": "Sugary drinks refer to any beverage with added sugar or other sweeteners, such as carbonated drinks, energy drinks, juices and hot beverages with added sugar. These drinks don't include 100% fruit and vegetable juices.",
+          "type": "radio",
+          "options": [
+            "Never due to food allergies, lifestyle choice or other reasons",
+            "Less than 1 time per day",
+            "1 - 2 times per day",
+            "3 times per day",
+            "4 times per day",
+            "5+ times per day"
+          ],
+          "layout": "block",
+          "required": true
+        },
+        {
+          "id": "step2_q5",
+          "label": "In a typical week, how often do your meals and snacks include processed meat?",
+          "description": "Processed meat includes anything that is cured, fermented or salted, such as bacon, sausages, hot dogs, ham, deli meats, canned meats and jerky.",
+          "type": "radio",
+          "options": [
+            "Never due to food allergies, lifestyle choice or other reasons",
+            "1 - 2 times per week",
+            "3 - 4 times per week",
+            "5 - 6 times per week",
+            "7+ times per week"
+          ],
+          "layout": "block",
+          "required": true
+        },
+        {
+          "id": "step2_q6",
+          "label": "In a typical week, how often do your meals and snacks include red meat?",
+          "description": "Red meat includes beef, lamb and pork that has not been processed.",
+          "type": "radio",
+          "options": [
+            "Never due to food allergies, lifestyle choice or other reasons",
+            "1 - 2 times per week",
+            "3 - 4 times per week",
+            "5 - 6 times per week",
+            "7+ times per week"
+          ],
+          "layout": "block",
+          "required": true
+        },
+        {
+          "id": "step2_q7",
+          "label": "In a typical week, how often do your meals and snacks include beans, peas or lentils?",
+          "description": "Examples include beans, lentils, chickpeas and split peas that are cooked, canned, or have been dried.",
+          "type": "radio",
+          "options": [
+            "Never due to food allergies, lifestyle choice or other reasons",
+            "1 - 2 times per week",
+            "3 - 4 times per week",
+            "5 - 6 times per week",
+            "7+ times per week"
+          ],
+          "layout": "block",
+          "required": true
+        },
+        {
+          "id": "step2_q8",
+          "label": "In a typical week, how often do your meals and snacks include nuts and seeds?",
+          "description": "Nuts and seeds include walnuts, sunflower seeds, flax seed, pecans, pistachios, peanut butter and almond butter that don't have added salt or sugar.",
+          "type": "radio",
+          "options": [
+            "Never due to food allergies, lifestyle choice or other reasons",
+            "1 - 2 times per week",
+            "3 - 4 times per week",
+            "5 - 6 times per week",
+            "7+ times per week"
+          ],
+          "layout": "block",
+          "required": true
+        },
+        {
+          "id": "step2_q9",
+          "label": "How often do you add table salt to your food at mealtimes?",
+          "description": "Salt includes coarse or fine salt, sea salt, Himalayan salt, and herb salt. This excludes plain dried herbs and spices without added salt.",
+          "type": "radio",
+          "options": [
+            "Never",
+            "Infrequently",
+            "Sometimes",
+            "Most of the time",
+            "Always"
+          ],
+          "layout": "block",
           "required": true
         }
       ]
     },
     {
       "id": "step3",
-      "icon":"fa-solid fa-stethoscope",
+      "icon": "fa-solid fa-stethoscope",
       "title": "Biometrics and health conditions",
       "description": "In this section, we'll find out more about your health history and measurements. Answer these questions to the best of your ability.<br><br>Unsure how to answer? No problem. You can either provide an estimate or select 'I don't know' from the list of answers provided.",
       "questions": [
         {
-          "id": "height",
-          "label": "Your height (cm)",
-          "description": "",
-          "type": "text",
-          "placeholder": "Enter height",
+          "id": "step3_q1",
+          "label": "Are you currently pregnant?",
+          "description": "It's important to know if you're pregnant, as there are many factors that change and influence you and your baby's health during this time.",
+          "type": "radio",
+          "options": [
+            "Yes",
+            "No",
+            "Prefer not to say"
+          ],
+          "layout": "block",
           "required": true
         },
         {
-          "id": "weight",
-          "label": "Your weight (kg)",
+          "id": "step3_q2",
+          "label": "How tall are you?",
           "description": "",
           "type": "text",
-          "placeholder": "Enter weight",
+          "placeholder": "Height",
+          "layout": "",
+          "required": true
+        },
+        {
+          "id": "step3_q3",
+          "label": "How much do you weight?",
+          "description": "",
+          "type": "text",
+          "placeholder": "Weight",
+          "layout": "",
           "required": true
         }
       ]
     },
     {
       "id": "step4",
-      "icon":"fa-solid fa-head-side-heart",
+      "icon": "fa-solid fa-head-side-heart",
       "title": "Mental wellbeing",
       "description": "Let's check in with your current headspace. Answer these questions to reflect how you've been feeling lately - emotionally and mentally.",
       "questions": [
         {
-          "id": "stress_level",
+          "id": "step4_q1",
           "label": "How often do you feel stressed?",
           "description": "",
           "type": "radio",
           "options": ["Never", "Sometimes", "Often", "Always"],
+          "layout": "inline",
           "required": true
         }
       ]
     },
     {
       "id": "step5",
-      "icon":"fa-solid fa-wine-glass",
+      "icon": "fa-solid fa-wine-glass",
       "title": "Alcohol and tobacco",
       "description": "Understanding your current alcohol or tobacco use is important to guide your overall health recommendations. Answer these questions about your habits right now.",
       "questions": [
         {
-          "id": "alcohol_use",
+          "id": "step5_q1",
           "label": "Do you consume alcohol?",
           "description": "",
           "type": "radio",
           "options": ["Yes", "No"],
+          "layout": "inline",
           "required": true
         },
         {
-          "id": "tobacco_use",
+          "id": "step5_q2",
           "label": "Do you use tobacco products?",
           "description": "",
           "type": "radio",
           "options": ["Yes", "No"],
+          "layout": "inline",
           "required": true
         }
       ]
     },
     {
       "id": "step6",
-      "icon":"fa-solid fa-bed-front",
+      "icon": "fa-solid fa-bed-front",
       "title": "Sleep",
       "description": "Are you getting the right amount of sleep? Studies show that sleep plays a big role in your everyday wellness and long-term health. Answer these questions about your sleep habits right now.",
       "questions": [
         {
-          "id": "q1",
+          "id": "step6_q1",
           "label": "How many hours do you usually sleep in a 24-hour period?",
           "description": "",
           "type": "text",
           "placeholder": "Hours per day",
+          "layout": "",
           "required": true
         }
       ]
